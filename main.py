@@ -25,9 +25,9 @@ else:
         f = open(options, )
     except FileNotFoundError:
         print('File not found: ' + options +
-              '. Please reinstall "options.json" from Github')
+              '. Please reinstall code from Github')
         print(
-            "Link coming soon"
+            "https://github.com/Veillax135/python-dice-testing/archive/refs/heads/main.zip"
         )
 # returns JSON object as a dictionary
 data = json.load(f)
@@ -51,19 +51,15 @@ def debugprint():
     time.sleep(6)
 
 
-debugprint()
+if debugverify1 == 'true':
+    debugprint()
 
 # Main loop
 while True:
 
     # Handles terminal clearing
     def cls():
-        if syssplit1[1] == 'Linux':
-            clear = lambda: os.system('clear')
-            clear()
-        elif syssplit1[1] == 'Windows':
-            clear = lambda: os.system('cls')
-            clear()
+        os.system('cls' if os.name == 'nt' else 'clear')
 
     # using now() to get current time
     try:
@@ -126,17 +122,18 @@ while True:
     cls()
     # Program introduction
     print(
-        "Welcome to my Multi-Functional Python Application! Please choose one of the following options:\nDice Roller(dice)\nEarth Circumfrence Calculator(ecc)\nCalculator(calc)\nIf you would ever like to come back to this menu, please type 'Main Menu'\n"
+        "Welcome to my Multi-Functional Python Application! Please choose one of the following options:\nDice Roller(dice)\nEarth Circumfrence Calculator(ecc)\nIf you would ever like to come back to this menu, please type 'Main Menu'\n"
     )
 
     timenow()
     try:
         option = input('\nPrompt: ').strip(' ')
     except KeyboardInterrupt:
-        print('^C\nKeyboard Interrupt. Terminating session...')
+        print('^C\nKeyboard Interrupt requested. Terminating session...')
         break
-        # Opens Dice rolling program which was scripted as a final project during schooling, and since then has been phased into this multiproject
+        # Opens Dice rolling program
     if option.lower() == 'dice':
+        cls()
         try:
             # prints all device info if debug is set to true in 'options.json'
             if debugverify1 == 'True':
@@ -205,7 +202,7 @@ while True:
                         '|roll    || arguments: roll <amt> <type>   || Rolls dice based on the included arguments   || aliases:                    |'
                     )
                     print(
-                        '|end     || arguments: end                 || use: Ends the program                        || aliases:                    |'
+                        '|end     || arguments: end                 || use: Ends the program                        || aliases: main menu          |'
                     )
                     print(
                         '|cls     || arguments: cls <os> (optional) || use: Clears the screen                       || aliases: clear, clearscreen |'
@@ -221,7 +218,7 @@ while True:
                     )
                     continue
                 #Handles ending the program
-                if cmd[0].lower() == 'main' and cmd[1].lower() == 'menu':
+                if cmd[0].lower() == 'main' and cmd[1].lower() == 'menu' or cmd[0] == 'end':
                     confirm = input(
                         "Are you sure you want to end the current session? Y/N "
                     )
@@ -239,35 +236,35 @@ while True:
                         continue
 
                 #Handles clearing the screen
-                if cmd[0] == 'cls':
-                    confirm = input(
-                        "Are you sure you want to clear the screen? Y/N ")
-                    if confirm == 'Y' or confirm == 'y':
-                        print(
-                            "CMD 'cls' called. Confirmation true. Clearing Terminal."
-                        )
-                        time.sleep(2)
-                        cls()
-                    elif confirm == 'N' or confirm == 'n':
-                        print(
-                            "CMD 'cls' called. Confirmation false. Terminal Clear cancled."
-                        )
-						continue
+                if cmd[0] == 'cls' or cmd[0] == 'clear' or cmd[0] == 'clearscreen':
+                    cls()
+                    title()
+                    continue
+                numthere = any(i.isdigit() for i in cmd[0])
+                
                 if cmd[0] == 'roll':
                     if len(cmd) == 3:
                         roll = int(cmd[2].lower().strip('d'))
                         i = 1
                         while int(i) < (int(cmd[1]) + 1):
-                            tmp = random.randint(1, roll)
+                            tmp = random.randint(1, int(roll))
                             num += tmp
                             i += 1
-                        print(num)
+                            if debugverify1 == 'True':
+                                print(
+                                    'Die {} rolled a d{}.\nDie output: {}\nCurrent total output: {}\n'.format(
+                                        i,
+                                        roll,
+                                        tmp,
+                                        num
+                                    ))
+                        print('Final output: ' + str(num))
                     num = 0
         except:
             print('')
-		
-    if option.lower() == 'ecc':
-		# This is a project made to earn extra-credit on an assignment during schooling
+
+    
+    if option.lower() == 'Earth Circumfrence Calculator' or option.lower() == 'ecc':
         cls()
         # Main-subloop
         while True:
