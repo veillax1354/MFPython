@@ -8,9 +8,9 @@ Before running the program, you'll need to install Python 3.8, do so from https:
 If anything occurrs such as an error just after running `main.py`, a debug log will be created in the root directory(`debug.log`). 
 
 ### **Installing `pytz`**
-Installing `pytz` is required to be able to show current time/date, if PowerShell can't find the module, the program will error out. 
+Installing `pytz` is required to be able to show current time/date, if Command Prompt can't find the module, the program will error out. 
 
-To install `pytz`, copy the following Shell command and paste it (`[ctrl + shift + v]`) into Powershell
+To install `pytz`, copy the following Shell command and paste it (`[ctrl + shift + v]`) into CMD
 
 ### **Command Prompt install command for `pytz`:** 
 `pip install pytz`
