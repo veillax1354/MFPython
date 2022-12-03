@@ -2,7 +2,7 @@
 
 ## **Starting out:**
 ### **Downloading:**
-Hit the green `<> Code` button, then hit `Download ZIP`, or click here:
+Hit the green `<> Code` button, then hit `Download ZIP`, or click here:  
 https://github.com/Veillax135/python-multiproject/archive/refs/heads/main.zip
 
 (This docuentation will refer to using Windows Command Prompt(cmd) or PowerShell(Shell), but the same steps should be able to be followed in Linux Terminal. You might not be able to follow through on Mac though.)
