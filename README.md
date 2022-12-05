@@ -1,31 +1,28 @@
-## [![python logo](https://www.python.org/static/img/python-logo.png)](https://python.org)
+[![python logo](https://www.python.org/static/img/python-logo.png)](https://python.org)
 
 # **Starting out:**
-You'll need the latest version of JetBrains PyCharm installed, and you must have the link to this repository, because you will need to clone it in the IDE.
+You'll need the latest version of JetBrains PyCharm or another IDE suitable for Python3 installed, and you must have the
+link to this repository, because you will need to clone it in the IDE.
 ## **Downloading:**
-### PyCharm: 
-#### 
-#### Linux(Ubuntu 20.4 will be used in the Linux example, but it should be similar on other OSes)
-
-(This documentation will refer to using Windows Command Prompt(cmd) or PowerShell(Shell), but the same steps should be able to be followed in Linux Terminal. You might not be able to follow through on Mac though.)
+[![pycharm banner](https://i1.wp.com/www.webprecious.com/wp-content/uploads/2019/09/Pycharm.png?fit=1350%2C500&ssl=1)](https://www.jetbrains.com/pycharm/download/)
+#### On Ubuntu
+Open the Terminal, then run `sudo snap install pycharm-community --classic` to install PyCharm via Snap
+#### On Windows
+Click on the "PyCharm" banner, then click on the black "Download" button to initiate the download. You should be able to
+run the .exe file that downloaded.
 ### **Pre-run changes & Installation**
-Before running the program, you'll need to install Python 3.8, do so from https://www.python.org/downloads/, you'll also want to install `pytz`, then set your timezone in `options.json`(choose from one of the timezones in `timezones.txt`).
+Before running the program, you'll need to install Python 3.8, do so from https://www.python.org/downloads/, you'll also
+want to install `pytz`, then set your timezone in `options.json`(choose from one of the timezones in `timezones.txt`).
 
-If anything occurs such as an error just after running `main.py`, a debug log will be created in the root directory(`debug.log`). 
+If anything occurs such as an error just after running `main.py`, a debug log will be created in the root directory
+(`debug.log`). 
 
 ### **Installing `pytz`**
-Installing `pytz` is required to be able to show current time/date, if Command Prompt can't find the module, the program will error out. 
-
-To install `pytz`, copy the following Shell command and paste it (`[ctrl + shift + v]`) into CMD
-
-### **Command Prompt installation command for `pytz`:** 
-`pip install pytz`
+Install pytz my opening the PyCharm Package Manager, search `pytz`, then click install for `pytz 2022.6`
 
 ---
 ## **Running the program**
-## [![cmd icon](https://raw.githubusercontent.com/microsoft/terminal/main/res/terminal/images/StoreLogo.scale-200.png)](https://en.wikipedia.org/wiki/Cmd.exe)
-Open CMD, navigate to the directory of the downloaded files after extracting using WinRar, 7Zip, or Window's default extractor(you'll have to find the installation directory and navigate to it manually, you can find instructions on how to do so here https://www.lifewire.com/change-directories-in-command-prompt-5185508).
-Once you've navigated to the folder containing the files, run `main.py` using `Python main.py`
+Thanks to PyCharm, it's simple, just press [Alt]+[Shift]+[F10]
 
 
 # How to use:
@@ -40,7 +37,8 @@ More will be added in the future, and updated versions can be downloaded here on
 If you choose "dice" as the initial input prompt, the following will explain how to use
 
 #### What this does:
-This program is a dice roller, allowing for multiple dice, such as 7 d10s, including the ability of custom dice types, such as 10 d7s.
+This program is a dice roller, allowing for multiple dice, such as 7 d10s, including the ability of custom dice types, 
+such as 10 d7s.
 
 #### Commands
 

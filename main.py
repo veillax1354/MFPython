@@ -11,13 +11,21 @@ import platform
 import time
 # Imports 'datetime' for accessing date and time
 import datetime
+
 try:
-    import pytz
+    from pytz import timezone
 except ModuleNotFoundError:
-    print("pytz not found. Please install it via running pip install pytz in Windows Command Prompt, or Powershell.")
+    print("pytz not found. Please install it before running.")
     f = open("error.log", "x")
-    f.write("pytz not found. Please install it via running pip install pytz in Windows Command Prompt, or Powershell.\n\n\nPythonError: Traceback (most recent call last)\nFile '/lib/python3.8/asyncio/futures.py', line 178, in result\n    raise self._exception\nFile '/lib/python3.8/asyncio/tasks.py', line 280, in __step\n    result = coro.send(None)\nFile '/lib/python3.8/site-packages/pyodide/_base.py', line 419, in eval_code_async\n    return await CodeRunner(\nFile '/lib/python3.8/site-packages/pyodide/_base.py', line 270, in run_async\n    coro = eval(mod, self.globals, self.locals)\nFile '<exec>', line 15, in <module>\nModuleNotFoundError: No module named 'pytz'")
-    
+    f.write("pytz not found. Please install it via running pip install pytz in Windows Command Prompt, "
+            "or Powershell.\n\n\nPythonError: Traceback (most recent call last)\nFile "
+            "'/lib/python3.8/asyncio/futures.py', line 178, in result\n    raise self._exception\nFile "
+            "'/lib/python3.8/asyncio/tasks.py', line 280, in __step\n    result = coro.send(None)\nFile "
+            "'/lib/python3.8/site-packages/pyodide/_base.py', line 419, in eval_code_async\n    return await "
+            "CodeRunner(\nFile '/lib/python3.8/site-packages/pyodide/_base.py', line 270, in run_async\n    coro = "
+            "eval(mod, self.globals, self.locals)\nFile '<exec>', line 15, in <module>\nModuleNotFoundError: No "
+            "module named 'pytz'")
+
     f.close()
     exit()
 # Handles options
@@ -25,7 +33,7 @@ except ModuleNotFoundError:
 options = 'options.json'
 if os.path.exists(options):
     f = open(options, 'r')
-    
+
 else:
     try:
         f = open(options, )
@@ -44,7 +52,6 @@ for i in data['options']:
     printverify = str(verify)
 debugverify1 = verify[1].strip(',')
 tz = verify[5].strip(',')
-tzdefault = verify[7].strip('}')
 system = str(platform.uname())
 syssplit = system.split()
 syssplit1 = syssplit[0].split("'")
@@ -67,10 +74,11 @@ while True:
     def cls():
         os.system('cls' if os.name == 'nt' else 'clear')
 
+
     # using now() to get current time
     try:
         tz = 'America/Denver'
-        current_time = datetime.datetime.now(pytz.timezone(tz))
+        current_time = datetime.datetime.now(timezone(tz))
         monthcheck = int(current_time.month) - 9
         daycheck = int(current_time.day) - 9
         yearcheck = int(current_time.year) - 9
@@ -118,14 +126,18 @@ while True:
     except:
         ctime = 'Sorry, an error occurred while trying to access the current date and time, please try again later.'
 
+
     def timenow():
         # prints the date and time
         print(ctime)
 
+
     cls()
     # Program introduction
     print(
-        "Welcome to my Multi-Functional Python Application! Please choose one of the following options:\nDice Roller(dice)\nEarth Circumfrence Calculator(ecc)\nIf you would ever like to come back to this menu, please type 'Main Menu'\n"
+        "Welcome to my Multi-Functional Python Application! Please choose one of the following options:\nDice Roller("
+        "dice)\nEarth Circumference Calculator(ecc)\nIf you would ever like to come back to this menu, please type "
+        "'Main Menu'\n "
     )
 
     timenow()
@@ -145,16 +157,37 @@ while True:
                 split1 = system.split()
                 split2 = split1[0].split("'")
                 print(system)
+
+
             # Program intro
-            #Title
+            # Title
             def title():
                 print(
-                    "____________________________________________________________\n|      ___        _                        _           _   |\n|     / _ \      | |                      | |         | |  |\n|    / /_\ \_   _| |_ ___  _ __ ___   __ _| |_ ___  __| |  |\n|    |  _  | | | | __/ _ \| '_ ` _ \ / _` | __/ _ \/ _` |  |\n|    | | | | |_| | || (_) | | | | | | (_| | ||  __/ (_| |  |\n|    \_| |_/\__,_|\__\___/|_| |_| |_|\__,_|\__\___|\__,_|  |\n|                                                          |\n|                                                          |\n|    ______ _           ______      _ _                    |\n|    |  _  (_)          | ___ \    | | |                   |\n|    | | | |_  ___ ___  | |_/ /___ | | | ___ _ __          |\n|    | | | | |/ __/ _ \ |    // _ \| | |/ _ \ '__|         |\n|    | |/ /| | _|  __/  | |\ \ (_) | | |  __/ |            |\n|    |___/ |_|\___\___| \_| \_\___/|_|_|\___|_|            |\n|                                                          |\n|__________________________________________________________|\n                       ________     \n            ______    | .   . |\    \n           /     /\   |   .   |.\   \n          /  '  /  \  | .   . |.'|  \n         /_____/. . \ |_______|.'|  \n         \ . . \    /  \ ' .   \.|  \n          \ . . \  /    \____'__\|  \n           \_____\/               \n"
+                    "____________________________________________________________\n|      ___        _                "
+                    "        _           _   |\n|     / _ \      | |                      | |         | |  |\n|    / "
+                    "/_\ \_   _| |_ ___  _ __ ___   __ _| |_ ___  __| |  |\n|    |  _  | | | | __/ _ \| '_ ` _ \ / _` "
+                    "| __/ _ \/ _` |  |\n|    | | | | |_| | || (_) | | | | | | (_| | ||  __/ (_| |  |\n|    \_| "
+                    "|_/\__,_|\__\___/|_| |_| |_|\__,_|\__\___|\__,_|  |\n|                                           "
+                    "               |\n|                                                          |\n|    ______ _    "
+                    "       ______      _ _                    |\n|    |  _  (_)          | ___ \    | | |            "
+                    "       |\n|    | | | |_  ___ ___  | |_/ /___ | | | ___ _ __          |\n|    | | | | |/ __/ _ \ "
+                    "|    // _ \| | |/ _ \ '__|         |\n|    | |/ /| | _|  __/  | |\ \ (_) | | |  __/ |            "
+                    "|\n|    |___/ |_|\___\___| \_| \_\___/|_|_|\___|_|            |\n|                               "
+                    "                           |\n|__________________________________________________________|\n     "
+                    "                  ________     \n            ______    | .   . |\    \n           /     /\   |   "
+                    ".   |.\   \n          /  '  /  \  | .   . |.'|  \n         /_____/. . \ |_______|.'|  \n         "
+                    "\ . . \    /  \ ' .   \.|  \n          \ . . \  /    \____'__\|  \n           \_____\/           "
+                    "    \n "
                 )
                 # Program instructions
                 print(
-                    "Please enter the dice you want to roll in the following format: \n<Die Amount> <Die Type>.\n\nYou can roll any die type you want by inputting the following cmd format:\nroll <amount> d<type>\n\nIf you would like to end the program, type 'end'. \nIf you would like to see the commands this program can run, type 'help', 'commands', or '?'.\n\nControls for custom rolls: custom <min> <max>\n\nThanks, and hope you enjoy!\n"
+                    "Please enter the dice you want to roll in the following format: \n<Die Amount> <Die "
+                    "Type>.\n\nYou can roll any die type you want by inputting the following cmd format:\nroll "
+                    "<amount> d<type>\n\nIf you would like to end the program, type 'end'. \nIf you would like to see "
+                    "the commands this program can run, type 'help', 'commands', or '?'.\n\nControls for custom "
+                    "rolls: custom <min> <max>\n\nThanks, and hope you enjoy!\n "
                 )
+
 
             # Targets, opens, and extracts data from 'options.json'
             title()
@@ -169,7 +202,7 @@ while True:
                 print('Debug Enabled\n' + printverify + '\n')
             printverify1 = verify[3].strip('}')
             if printverify1 == 'True':
-                print('Itteration printing Enabled\n' + printverify + '\n')
+                print('Iteration printing Enabled\n' + printverify + '\n')
             # Declares variables needed
             commands = ['']
             endcode = ''
@@ -177,9 +210,9 @@ while True:
             num = 0
             roll = 0
             i = 1
-            # Main-subloop
+            # Main-sub-loop
             while True:
-                # Command input and parcing
+                # Command input and parsing
                 try:
                     prompt = input('Cmd: ')
                 except KeyboardInterrupt:
@@ -189,38 +222,44 @@ while True:
                     time.sleep(2)
                     break
                 cmd = prompt.split(' ')
-                #Handles cmd listing
+                # Handles cmd listing
                 if cmd[0] == 'help' or cmd[0] == 'commands' or cmd[0] == '?':
                     print('')
                     print(
-                        '._________________________________________________________________________________________________________________________.'
+                        '._________________________________________________________________________________________________________________________. '
                     )
                     print(
-                        '|                                               Commands list                                                             |'
-                    )
-                    print(
-                        '|                                                                                                                         |'
-                    )
-                    print(
-                        '|roll    || arguments: roll <amt> <type>   || Rolls dice based on the included arguments   || aliases:                    |'
-                    )
-                    print(
-                        '|end     || arguments: end                 || use: Ends the program                        || aliases: main menu          |'
-                    )
-                    print(
-                        '|cls     || arguments: cls <os> (optional) || use: Clears the screen                       || aliases: clear, clearscreen |'
-                    )
-                    print(
-                        '|help    || arguments: help                || prints out the command list                  || aliases: ?, commands        |'
+                        '|                                               Commands list                                '
+                        '                             | '
                     )
                     print(
                         '|                                                                                                                         |'
                     )
                     print(
-                        '\_________________________________________________________________________________________________________________________/'
+                        '|roll    || arguments: roll <amt> <type>   || Rolls dice based on the included arguments   '
+                        '|| aliases:                    | '
+                    )
+                    print(
+                        '|end     || arguments: end                 || use: Ends the program                        '
+                        '|| aliases: main menu          | '
+                    )
+                    print(
+                        '|cls     || arguments: cls <os> (optional) || use: Clears the screen                       '
+                        '|| aliases: clear, clearscreen | '
+                    )
+                    print(
+                        '|help    || arguments: help                || prints out the command list                  '
+                        '|| aliases: ?, commands        | '
+                    )
+                    print(
+                        '|                                                                                            '
+                        '                             | '
+                    )
+                    print(
+                        '\_________________________________________________________________________________________________________________________/ '
                     )
                     continue
-                #Handles ending the program
+                # Handles ending the program
                 if cmd[0].lower() == 'main' and cmd[1].lower() == 'menu' or cmd[0] == 'end':
                     confirm = input(
                         "Are you sure you want to end the current session? Y/N "
@@ -238,13 +277,12 @@ while True:
                         time.sleep(2)
                         continue
 
-                #Handles clearing the screen
+                # Handles clearing the screen
                 if cmd[0] == 'cls' or cmd[0] == 'clear' or cmd[0] == 'clearscreen':
                     cls()
                     title()
                     continue
-                numthere = any(i.isdigit() for i in cmd[0])
-                
+
                 if cmd[0] == 'roll':
                     if len(cmd) == 3:
                         roll = int(cmd[2].lower().strip('d'))
@@ -266,7 +304,6 @@ while True:
         except:
             print('')
 
-    
     if option.lower() == 'Earth Circumfrence Calculator' or option.lower() == 'ecc':
         cls()
         # Main-subloop
