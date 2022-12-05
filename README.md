@@ -1,28 +1,30 @@
-## [![python logo](https://www.python.org/static/img/python-logo.png)](python.org)
+## [![python logo](https://www.python.org/static/img/python-logo.png)](https://python.org)
 
-## **Starting out:**
-### **Downloading:**
-Hit the green `<> Code` button, then hit `Download ZIP`, or click here:  
-https://github.com/Veillax135/python-multiproject/archive/refs/heads/main.zip
+# **Starting out:**
+You'll need the latest version of JetBrains PyCharm installed, and you must have the link to this repository, because you will need to clone it in the IDE.
+## **Downloading:**
+### PyCharm: 
+#### 
+#### Linux(Ubuntu 20.4 will be used in the Linux example, but it should be similar on other OSes)
 
-(This docuentation will refer to using Windows Command Prompt(cmd) or PowerShell(Shell), but the same steps should be able to be followed in Linux Terminal. You might not be able to follow through on Mac though.)
+(This documentation will refer to using Windows Command Prompt(cmd) or PowerShell(Shell), but the same steps should be able to be followed in Linux Terminal. You might not be able to follow through on Mac though.)
 ### **Pre-run changes & Installation**
 Before running the program, you'll need to install Python 3.8, do so from https://www.python.org/downloads/, you'll also want to install `pytz`, then set your timezone in `options.json`(choose from one of the timezones in `timezones.txt`).
 
-If anything occurrs such as an error just after running `main.py`, a debug log will be created in the root directory(`debug.log`). 
+If anything occurs such as an error just after running `main.py`, a debug log will be created in the root directory(`debug.log`). 
 
 ### **Installing `pytz`**
 Installing `pytz` is required to be able to show current time/date, if Command Prompt can't find the module, the program will error out. 
 
 To install `pytz`, copy the following Shell command and paste it (`[ctrl + shift + v]`) into CMD
 
-### **Command Prompt install command for `pytz`:** 
+### **Command Prompt installation command for `pytz`:** 
 `pip install pytz`
 
 ---
 ## **Running the program**
 ## [![cmd icon](https://raw.githubusercontent.com/microsoft/terminal/main/res/terminal/images/StoreLogo.scale-200.png)](https://en.wikipedia.org/wiki/Cmd.exe)
-Open CMD, navigate to the directory of the downloaded files after extracting using WinRar, 7Zip, or Window's default extractor(you'll have to find the install directory and navigate to it manually, you can find instructions on how to do so here https://www.lifewire.com/change-directories-in-command-prompt-5185508).
+Open CMD, navigate to the directory of the downloaded files after extracting using WinRar, 7Zip, or Window's default extractor(you'll have to find the installation directory and navigate to it manually, you can find instructions on how to do so here https://www.lifewire.com/change-directories-in-command-prompt-5185508).
 Once you've navigated to the folder containing the files, run `main.py` using `Python main.py`
 
 
@@ -31,7 +33,7 @@ Once you've navigated to the folder containing the files, run `main.py` using `P
 You will get prompted to choose an option, currently there is only one option:
 
     dice
-More will be added in the future, and updated versions can be downloaded here onx Github.
+More will be added in the future, and updated versions can be downloaded here onx GitHub.
 
 ## Prompts:
 ### **Dice**
