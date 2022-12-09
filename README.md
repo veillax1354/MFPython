@@ -24,8 +24,8 @@ Install pytz my opening the PyCharm Package Manager, search `pytz`, then click i
 ## **Running the program**
 Thanks to PyCharm, it's simple, just press [Alt]+[Shift]+[F10]
 
-[![replit logo](https://blog.replit.com/images/new_logo/logotype.png?v=1664916455431)](https://www.replit.com)
 ## **Replit**
+[![replit logo](https://blog.replit.com/images/new_logo/logotype.png?v=1664916455431)](https://www.replit.com)
 You'll need a Replit account to run this, sign up or sign in at httpw://www.replit.com
 Once you're logged in, go to the following link and click the green run button, then follow the instructions down below!
 Login or Sign Up: https://www.replit.com/login
