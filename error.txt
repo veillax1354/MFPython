@@ -1,0 +1,2 @@
+main.py returned exit code 0
+
