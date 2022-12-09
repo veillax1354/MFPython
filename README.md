@@ -1,8 +1,8 @@
 [![python logo](https://www.python.org/static/img/python-logo.png)](https://python.org)
 
 # **Starting out:**
-You'll need the latest version of JetBrains PyCharm or another IDE suitable for Python3 installed, and you must have the
-link to this repository, because you will need to clone it in the IDE.
+You'll either need the latest version of JetBrains PyCharm or another IDE suitable for Python3 installed, and you must have the
+link to this repository, because you will need to clone it in the IDE or a Replit account
 ## **Downloading:**
 [![pycharm banner](https://i1.wp.com/www.webprecious.com/wp-content/uploads/2019/09/Pycharm.png?fit=1350%2C500&ssl=1)](https://www.jetbrains.com/pycharm/download/)
 #### On Ubuntu
@@ -24,6 +24,12 @@ Install pytz my opening the PyCharm Package Manager, search `pytz`, then click i
 ## **Running the program**
 Thanks to PyCharm, it's simple, just press [Alt]+[Shift]+[F10]
 
+[![replit logo](https://blog.replit.com/images/new_logo/logotype.png?v=1664916455431)](https://www.replit.com)
+## **Replit**
+You'll need a Replit account to run this, sign up or sign in at httpw://www.replit.com
+Once you're logged in, go to the following link and click the green run button, then follow the instructions down below!
+Login or Sign Up: https://www.replit.com/login
+Repl Link: https://replit.com/@Veillax135/MFPy?v=1
 
 # How to use:
 
