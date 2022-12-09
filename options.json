@@ -1,8 +1,8 @@
 {
    "options": [
       {
-          "debug": true,
-          "printitterations": true,
+          "debug": false,
+          "printitterations": false,
           "tz": "America/Denver"
       }
    ]
