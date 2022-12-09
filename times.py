@@ -1,5 +1,6 @@
 import datetime, pytz
 from options import load
+load('options.json')
 def timenow():
     try:
         tz = 'America/Denver'
