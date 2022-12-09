@@ -3,6 +3,7 @@
 # **Starting out:**
 You'll either need the latest version of JetBrains PyCharm or another IDE suitable for Python3 installed, and you must have the
 link to this repository, because you will need to clone it in the IDE or a Replit account
+## **PyCharm**
 ## **Downloading:**
 [![pycharm banner](https://i1.wp.com/www.webprecious.com/wp-content/uploads/2019/09/Pycharm.png?fit=1350%2C500&ssl=1)](https://www.jetbrains.com/pycharm/download/)
 #### On Ubuntu
@@ -21,7 +22,7 @@ If anything occurs such as an error just after running `main.py`, a debug log wi
 Install pytz my opening the PyCharm Package Manager, search `pytz`, then click install for `pytz 2022.6`
 
 ---
-## **Running the program**
+### **Running the program**
 Thanks to PyCharm, it's simple, just press [Alt]+[Shift]+[F10]
 
 ## **Replit**
